@@ -10,7 +10,6 @@ namespace TheOnesGameTests
         public Position(string name)
         {
             _name = name;
-            UserStories = new List<UserStory>();
          
         }
 
@@ -19,6 +18,6 @@ namespace TheOnesGameTests
             get { return _name; }
         }
 
-        public List<UserStory> UserStories { get; set; }
+        public UserStory UserStory { get; set; }
     }
 }
