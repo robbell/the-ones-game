@@ -28,7 +28,7 @@ namespace TheOnesGameConsole
         private static void DrawEdge(Edge edge)
         {
             const int numberOfPositions = 5;
-            for(var positionCount = 1; positionCount <= numberOfPositions -1 ; positionCount++)
+            for(var positionCount = 1; positionCount <= numberOfPositions  ; positionCount++)
             {
                 Console.Write("| {0} |", positionCount);    
             }
@@ -45,7 +45,7 @@ namespace TheOnesGameConsole
 
         private static string GetStoryText(UserStory story)
         {
-            return story == null ? "-" : "O";
+            return story == null ? "-" : story.StoryPoint.ToString();
         }
     }
 }
