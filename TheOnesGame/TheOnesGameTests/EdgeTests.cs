@@ -27,5 +27,17 @@ namespace TheOnesGameTests
             edge.SetPosition(1, userStory);
             Assert.That(edge.GetStoryOnPosition(1), Is.EqualTo(userStory));
         }
+
+        [Test]
+        public void User_story_can_be_moved_from_given_position_to_the_next_position()
+        {
+            var userStory = new UserStory(3);
+            var edge = new Edge();
+            const int startingPosition = 1;
+            edge.SetPosition(startingPosition,userStory);
+
+            edge.MoveStoryOn(startingPosition);
+            Assert.That(edge.GetStoryOnPosition(startingPosition+1), Is.EqualTo(userStory));
+        }
     }
 }
