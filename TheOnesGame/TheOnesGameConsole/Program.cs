@@ -28,19 +28,31 @@ namespace TheOnesGameConsole
         private static void DrawEdge(Edge edge)
         {
             const int numberOfPositions = 5;
-            for(var positionCount = 1; positionCount <= numberOfPositions  ; positionCount++)
-            {
-                Console.Write("| {0} |", positionCount);    
-            }
-                Console.WriteLine();
-            for(var positionCount = 1; positionCount <= numberOfPositions -1 ; positionCount++)
+            DrawEdgeLabelRow(numberOfPositions);
+            DrawEdgeData(edge, numberOfPositions);
+        }
+
+        private static void DrawEdgeData(Edge edge, int numberOfPositions)
+        {
+            for (var positionCount = 1; positionCount <= numberOfPositions; positionCount++)
             {
                 var story = edge.GetStoryOnPosition(positionCount);
-              
-                Console.Write("| {0} |", GetStoryText(story));    
-            }
-            Console.WriteLine();
 
+                Console.Write(" {0} ", GetStoryText(story));
+            }
+            Console.Write(" {0} ", GetStoryText(edge.CompleteStory));
+            Console.WriteLine();
+        }
+
+        private static void DrawEdgeLabelRow(int numberOfPositions)
+        {
+           
+            for (var positionCount = 1; positionCount <= numberOfPositions; positionCount++)
+            {
+                Console.Write(" {0} ", positionCount);
+            }
+            Console.Write(" Done ");
+            Console.WriteLine();
         }
 
         private static string GetStoryText(UserStory story)
