@@ -46,12 +46,17 @@
     <Compile Include="EdgeTests.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="PositionTest.cs" />
+    <Compile Include="OnesLibTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TheOnesGameConsole\TheOnesGameConsole.csproj">
+      <Project>{AAA5C237-050D-4F14-9DDE-E004AD926A48}</Project>
+      <Name>TheOnesGameConsole</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TheOnesGame\TheOnesGame.csproj">
       <Project>{C7328A6D-831E-41E7-84D1-0AF52F05500A}</Project>
       <Name>TheOnesGame</Name>

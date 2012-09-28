@@ -14,7 +14,7 @@ namespace TheOnesGameTests
             var edge = new Edge();
 
             edge.SetPosition(1, userStory);
-                Assert.That(edge.CompleteStory, Is.EqualTo(null));
+            Assert.That(edge.CompleteStory, Is.EqualTo(null));
 
             edge.MoveStoryOn(1);
 
