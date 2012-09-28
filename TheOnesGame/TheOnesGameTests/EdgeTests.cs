@@ -40,7 +40,9 @@ namespace TheOnesGameTests
 
             edge.MoveStoryOn(startingPosition);
             Assert.That(edge.GetStoryOnPosition(startingPosition+1), Is.EqualTo(userStory));
+            Assert.That(edge.GetStoryOnPosition(startingPosition), Is.EqualTo(null));
         }
+
 //        
 //        [Test]
 //        public void User_story_position_can_be_set_on_an_edge()
