@@ -9,6 +9,7 @@ namespace TheOnesGameConsole
         {
             var edge = new Edge();
             edge.SetPosition(1, new UserStory(2));
+            edge.SetPosition(3, new UserStory(5));
 
             DrawEdge(edge);
             string input = AskPlayerToMove();
