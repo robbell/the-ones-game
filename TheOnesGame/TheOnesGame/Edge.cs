@@ -4,14 +4,16 @@ namespace TheOnesGame
 {
     public class Edge
     {
+        private UserStory[] position = new UserStory[5];
+
         public void SetPosition(int i, UserStory userStory)
         {
-            
+            position[i] = userStory;
         }
 
         public void MoveStoryOn(int i)
         {
-            throw new NotImplementedException();
+            
         }
 
         public UserStory CompleteStory
@@ -22,7 +24,7 @@ namespace TheOnesGame
 
         public UserStory GetStoryOnPosition(int i)
         {
-            return null;
+            return position[i];
         }
     }
 }
