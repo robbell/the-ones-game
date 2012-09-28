@@ -16,6 +16,7 @@ namespace TheOnesGame
             var userStory = GetStoryOnPosition(i);
             //if(story == null) return;
             SetPosition(i+1, userStory);
+            SetPosition(i, null);
         }
 
         public UserStory CompleteStory

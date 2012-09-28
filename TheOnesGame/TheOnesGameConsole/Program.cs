@@ -11,33 +11,41 @@ namespace TheOnesGameConsole
             edge.SetPosition(1, new UserStory(2));
 
             DrawEdge(edge);
-            AskPlayerToMove();
+            string input = AskPlayerToMove();
+            edge.MoveStoryOn(1);
             DrawEdge(edge);
 
             Console.ReadKey();
         }
 
-        private static void AskPlayerToMove()
+        private static string AskPlayerToMove()
         {
-            Console.ReadLine();
+            Console.WriteLine("Please choose user story to move:");
+            return Console.ReadLine();
+
         }
 
         private static void DrawEdge(Edge edge)
         {
             const int numberOfPositions = 5;
-
-            for(var positionCount = 1; positionCount <= numberOfPositions; positionCount++)
+            for(var positionCount = 1; positionCount <= numberOfPositions  ; positionCount++)
+            {
+                Console.Write("| {0} |", positionCount);    
+            }
+                Console.WriteLine();
+            for(var positionCount = 1; positionCount <= numberOfPositions -1 ; positionCount++)
             {
                 var story = edge.GetStoryOnPosition(positionCount);
-                Console.Write("{0}:{1}|", positionCount, GetStoryText(story));
+              
+                Console.Write("| {0} |", GetStoryText(story));    
             }
+            Console.WriteLine();
 
-            Console.WriteLine("Complete:" + GetStoryText(edge.CompleteStory));
         }
 
         private static string GetStoryText(UserStory story)
         {
-            return story == null ? "X" : "O";
+            return story == null ? "-" : story.StoryPoint.ToString();
         }
     }
 }
