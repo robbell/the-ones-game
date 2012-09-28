@@ -8,7 +8,7 @@ namespace TheOnesGame
 
         public void SetPosition(int i, UserStory userStory)
         {
-            position[i] = userStory;
+            position[i-1] = userStory;
         }
 
         public void MoveStoryOn(int i)
@@ -26,7 +26,7 @@ namespace TheOnesGame
 
         public UserStory GetStoryOnPosition(int i)
         {
-            return position[i];
+            return position[i-1];
         }
     }
 }
