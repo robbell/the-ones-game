@@ -16,7 +16,7 @@ namespace TheOnesGame
 
         public UserStory CompleteStory
         {
-            get { throw new NotImplementedException(); }
+            get { return null; }
             set { throw new NotImplementedException(); }
         }
 
