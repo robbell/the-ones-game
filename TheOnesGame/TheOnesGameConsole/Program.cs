@@ -1,5 +1,6 @@
 ﻿using System;
 using TheOnesGame;
+using System.Linq;
 
 namespace TheOnesGameConsole
 {
@@ -13,7 +14,8 @@ namespace TheOnesGameConsole
 
             DrawEdge(edge);
             string input = AskPlayerToMove();
-            edge.MoveStoryOn(1);
+            var positionToMovefrom = Convert.ToInt32(input.Last() - '0');
+            edge.MoveStoryOn(positionToMovefrom);
             DrawEdge(edge);
 
             Console.ReadKey();
