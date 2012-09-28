@@ -13,6 +13,8 @@ namespace TheOnesGameTests
 //            var edge = new Edge();
 //
 //            edge.SetPosition(1, userStory);
+//                Assert.That(edge.CompleteStory, Is.EqualTo(null));
+
 //            edge.MoveStoryOn(1);
 //
 //            Assert.That(edge.CompleteStory, Is.EqualTo(userStory));
@@ -39,5 +41,15 @@ namespace TheOnesGameTests
             edge.MoveStoryOn(startingPosition);
             Assert.That(edge.GetStoryOnPosition(startingPosition+1), Is.EqualTo(userStory));
         }
+//        
+//        [Test]
+//        public void User_story_position_can_be_set_on_an_edge()
+//        {
+//            var userStory = new UserStory(2);
+//            var edge = new Edge();
+//
+//            edge.SetPosition(1, userStory);
+//            Assert.That(edge.GetStoryOnPosition(1), Is.EqualTo(userStory));
+//        }
     }
 }
