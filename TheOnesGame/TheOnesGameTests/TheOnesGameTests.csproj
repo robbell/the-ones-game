@@ -44,8 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EdgeTests.cs" />
-    <Compile Include="Position.cs" />
-    <Compile Include="PositionTest.cs" />
     <Compile Include="OnesLibTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
